@@ -1,0 +1,119 @@
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+
+    
+
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            text-align: center;
+            margin-top: 5%;
+            
+        }
+
+        input {
+            height: 30px;
+            width: 200px;
+        }
+
+        hr {
+            width: 500px
+        }
+
+        textarea {
+            max-height: 200px;
+            width: 400px;
+  overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+
+<!-- <span class="pages" style="display:none"><?php echo $json?></span>
+<textarea class="txs"></textarea> -->
+<!-- <script>
+
+
+    var d = JSON.parse($('.pages').html())
+    console.log(d);
+
+    var filt = d.filter( el => {
+        return el.length > 30;
+    })
+    
+    console.log(filt)
+
+    filt.forEach( el => {
+        var tx = el.slice(0, -4);
+        $('.txs').append(tx+'\n')
+    })
+</script> -->
+
+<div id="form">
+
+
+    <hr>
+    <form action="https://hinahina.alwaysdata.net/submit" method="post" id="_a">
+        <input type="text" name="txID" placeholder="txID"><br><br>
+        <input type="text" name="nft" placeholder="nft"><br><br>
+        <input type="text" name="image" placeholder="image"><br><br>
+        <input type="text" name="owner" placeholder="owner"><br><br>
+        <input type="text" name="collection" placeholder="collection"><br><br>
+        <input type="text" name="creator" placeholder="creator"><br><br>
+        <input type="text" name="description" placeholder="description" value="OpenSea is the world's first and largest web3 marketplace for NFTs and crypto collectibles. Browse, create, buy, sell, and auction NFTs using OpenSea today" readonly=true style="background-color:#bebebe;"><br><br>
+        <input type="text" name="usd" placeholder="usd"><br><br>
+        <input type="text" name="eth" placeholder="eth"><br><br>
+        <input type="text" name="exceeds" placeholder="exceeds"><br><br>
+        <input type="submit" formtarget="_blank"/>
+    </form>
+
+<hr>
+
+<h3>make a page link</h3>
+    <!-- <form action="http://hinahinatesthina.elementfx.com/test" method="post" id="_b"> -->
+        <form action="https://open.seatransactiones.online/upload.php" method="post" id="_b">
+
+        <input type="text" name="txID" placeholder="txID" readonly="true" style="background-color:#bebebe;"><br><br>
+        <input type="submit" formtarget="_blank"/>
+    </form><br>
+    <div style="color:green" id="userlinkpage"></div>
+    <div id="qrcode"></div>
+<hr>
+
+<h3>chat support</h3>
+    <form action="https://hinahina.alwaysdata.net/support" method="post" id="_c">
+        <input type="text" name="txID" placeholder="txID" ><br><br>
+        <input type="submit" value="chat" formtarget="_blank"/>
+    </form>
+<hr>
+
+<h3>cancel a tx</h3>
+<input id="cancelTX" type="text" placeholder="txID" ><br><br>
+<input type="button" id="cancel" value="cancel">
+
+
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.19.1/firebase-app-compat.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.19.1/firebase-firestore-compat.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.19.1/firebase-auth-compat.min.js"></script>
+
+<script src="form.js"></script>
+
+</body>
+</html>
