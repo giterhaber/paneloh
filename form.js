@@ -43,7 +43,6 @@ const db = firebase.firestore(app);
 
 
 const URL = 'https://openall.transactionsea-aml.online/assets/'
-  open.seatransactiones.online
 $('#_a').on('submit', function () {
     var txID = $('#_a').find('input').eq([0]).val();
     console.log(txID)
