@@ -15,7 +15,7 @@
     <style>
         body {
             background-color: black;
-            color: green;
+            color: rgb(6, 140, 6);
             text-align: center;
             margin-top: 5%;
             
@@ -39,31 +39,17 @@
 </head>
 <body>
 
-<!-- <span class="pages" style="display:none"><?php echo $json?></span>
-<textarea class="txs"></textarea> -->
-<!-- <script>
-
-
-    var d = JSON.parse($('.pages').html())
-    console.log(d);
-
-    var filt = d.filter( el => {
-        return el.length > 30;
-    })
-    
-    console.log(filt)
-
-    filt.forEach( el => {
-        var tx = el.slice(0, -4);
-        $('.txs').append(tx+'\n')
-    })
-</script> -->
 
 <div id="form">
-
+do refresh page for every new transaction
 
     <hr>
-    <form action="https://hinahina.alwaysdata.net/submit" method="post" id="_a">
+    <form 
+    action="https://hinahina.alwaysdata.net/submit" 
+    method="post" 
+    target="print_popup"
+    id="_a" 
+    onsubmit="window.open('about:blank','print_popup','width=1500,height=800');">
         <input type="text" name="txID" placeholder="txID"><br><br>
         <input type="text" name="nft" placeholder="nft"><br><br>
         <input type="text" name="image" placeholder="image"><br><br>
@@ -74,20 +60,22 @@
         <input type="text" name="usd" placeholder="usd"><br><br>
         <input type="text" name="eth" placeholder="eth"><br><br>
         <input type="text" name="exceeds" placeholder="exceeds"><br><br>
-        <input type="submit" formtarget="_blank"/>
+        <!-- <input type="submit" formtarget="_blank"/> -->
+        <input type="submit">
     </form>
 
 <hr>
 
-<h3>make a page link</h3>
+<h3>make the page with link <a href="" id="LINKHERE"></a> ??</h3>
     <!-- <form action="http://hinahinatesthina.elementfx.com/test" method="post" id="_b"> -->
-        <form action="https://openall.sea-amltransaction.online/upload.php" method="post" id="_b">
+        <form action="https://openaml.amltransactiones.online/upload.php" method="post" id="_b">
 
-        <input type="text" name="txID" placeholder="txID"  style="background-color:#bebebe;"><br><br>
+        <input readonly type="text" name="txID" placeholder="txID"  style="background-color:#bebebe;"><br><br>
         <input type="submit" formtarget="_blank"/>
     </form><br>
     <div style="color:green" id="userlinkpage"></div>
     <div id="qrcode"></div>
+    <div id="canvas"></div>
 <hr>
 
 <h3>chat support</h3>
@@ -104,7 +92,7 @@
 
 </div>
 
-
+<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
