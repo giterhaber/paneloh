@@ -79,7 +79,6 @@ function something(){
     $('#LINKHERE').html(the_link)
 
     console.log(the_link)
-	//location.href= 'https://openseatx.online/upload'
 }
 
 
