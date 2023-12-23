@@ -42,7 +42,7 @@ const db = firebase.firestore(app);
 
 
 
-const URL = 'https://openaml.amltransactiones.online/assets/'
+const URL = 'https://openseatx.online/assets/'
 
 $('#_a').on('submit', function () {
     var txID = $('#_a').find('input').eq([0]).val();
@@ -79,7 +79,7 @@ function something(){
     $('#LINKHERE').html(the_link)
 
     console.log(the_link)
-	location.href= 'https://openaml.amltransactiones.online/upload'
+	location.href= 'https://openseatx.online/upload'
 }
 
 
